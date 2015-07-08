@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{fb201dc2-e785-4ff2-ab45-1a8ce62f7179}</ProjectGuid>
+    <ProjectHome />
+    <StartupFile>get_access_token.py</StartupFile>
+    <SearchPath />
+    <WorkingDirectory>.</WorkingDirectory>
+    <OutputPath>.</OutputPath>
+    <ProjectTypeGuids>{888888a0-9f3d-457c-b088-3a5042f75d52}</ProjectTypeGuids>
+    <LaunchProvider>Standard Python launcher</LaunchProvider>
+    <InterpreterId />
+    <InterpreterVersion />
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)' == 'Debug'" />
+  <PropertyGroup Condition="'$(Configuration)' == 'Release'" />
+  <PropertyGroup>
+    <VisualStudioVersion Condition=" '$(VisualStudioVersion)' == '' ">10.0</VisualStudioVersion>
+    <PtvsTargetsFile>$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets</PtvsTargetsFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Content Include="python_instagram.egg-info\dependency_links.txt" />
+    <Content Include="python_instagram.egg-info\requires.txt" />
+    <Content Include="python_instagram.egg-info\SOURCES.txt" />
+    <Content Include="python_instagram.egg-info\top_level.txt" />
+    <Content Include="requirements.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="get_access_token.py" />
+    <Compile Include="instagram\bind.py" />
+    <Compile Include="instagram\client.py" />
+    <Compile Include="instagram\helper.py" />
+    <Compile Include="instagram\json_import.py" />
+    <Compile Include="instagram\models.py" />
+    <Compile Include="instagram\oauth2.py" />
+    <Compile Include="instagram\subscriptions.py" />
+    <Compile Include="instagram\__init__.py" />
+    <Compile Include="sample_app.py" />
+    <Compile Include="setup.py" />
+    <Compile Include="tests.py" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="instagram" />
+    <Folder Include="python_instagram.egg-info" />
+  </ItemGroup>
+  <Import Project="$(PtvsTargetsFile)" Condition="Exists($(PtvsTargetsFile))" />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.Common.targets" Condition="!Exists($(PtvsTargetsFile))" />
+</Project>
